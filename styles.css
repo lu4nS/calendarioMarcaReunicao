@@ -1,0 +1,130 @@
+/* Estilo para o contêiner principal */
+#container {
+  display: flex; /* Usando Flexbox para alinhamento horizontal */
+  justify-content: center;
+  align-items: flex-start; /* Alinha os itens no topo */
+  margin: 20px; /* Margem para o contêiner */
+}
+
+/* Estilo para o texto */
+#text-container {
+  width: 300px; /* Largura fixa para a div de texto */
+  text-align: justify; /* Justifica o texto */
+  font-size: 30px; /* Tamanho da fonte */
+}
+
+/* Estilo para o calendário */
+#calendar {
+  display: flex;
+  flex-wrap: wrap;
+  width: 300px;
+  margin: 0 20px; /* Margem lateral */
+}
+
+#calendar div {
+  width: 40px;
+  height: 40px;
+  margin: 5px;
+  background-color: #e0e0e0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+#calendar div:hover {
+  background-color: #ccc;
+}
+
+/* Restante do CSS */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f5f5f5;
+}
+
+#copy-url-btn {
+  display: block;
+  margin: 20px auto;
+  padding: 10px 20px;
+  background-color: #555;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+#copy-url-btn:hover {
+  background-color: #777;
+}
+
+/* Estilo para modais */
+#modal, #confirmation-modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background-color: #333;
+  color: white;
+  padding: 20px;
+  border-radius: 10px;
+  width: 400px;
+  max-width: 90%;
+}
+
+.close {
+  float: right;
+  cursor: pointer;
+  color: white;
+  font-size: 24px;
+}
+
+.day-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 10px 0;
+}
+
+input[type="time"] {
+  background-color: #444;
+  color: white;
+  border: 1px solid #666;
+  padding: 5px;
+  border-radius: 4px;
+  margin: 0 5px;
+}
+
+button {
+  background-color: #555;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+button:hover {
+  background-color: #777;
+}
+
+button#save-btn {
+  margin-top: 10px;
+}
+
+button#whatsapp-btn {
+  background-color: #25D366;
+  margin-top: 10px;
+}
+
+button#whatsapp-btn:hover {
+  background-color: #20b357;
+}

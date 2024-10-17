@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calendário de Agendamento</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="container">
+        <div id="text-container">
+            <h2>Selecione as datas que deseja disponibilizar</h2>
+        </div>
+
+        <div id="calendar">
+            <!-- O calendário será gerado dinamicamente -->
+        </div>
+    </div>
+
+    <!-- Botão para copiar a URL -->
+    <button id="copy-url-btn">Copiar URL</button>
+
+    <!-- Modal de Horários -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Horários disponíveis em <span id="selected-date"></span></h2>
+            <div id="time-slots">
+                <!-- Horários serão carregados dinamicamente aqui -->
+                <div class="day-row">
+                    <label class="switch">
+                        <input type="checkbox" id="toggle-availability">
+                        <span class="slider"></span>
+                    </label>
+                    <span>Disponibilidade</span>
+                    <input type="time" id="start-time" value="09:00">
+                    <span>-</span>
+                    <input type="time" id="end-time" value="17:00">
+                </div>
+            </div>
+            <button id="save-btn">Salvar Alterações</button>
+        </div>
+    </div>
+
+    <!-- Modal de Confirmação de Reserva (inicialmente oculto) -->
+    <div id="confirmation-modal" class="modal" style="display: none;">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Confirmação de Reserva</h2>
+            <p id="reservation-details">Você está reservando esta data e horário:</p>
+            <button id="whatsapp-btn">Enviar pelo WhatsApp</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
